@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  padding: 40px 20px;
+  font-size: 10px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 100vmin;
+  height: 50vmin;
+  background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - var(--border-size) * 2) calc(100% - var(--border-size) * 2), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button1 {
+  color: white;
+  background: rgb(64, 224, 208);
+  background: linear-gradient(90deg, rgb(64, 224, 208) 7%, rgb(152, 251, 152) 100%);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}/*# sourceMappingURL=contact.css.map */
